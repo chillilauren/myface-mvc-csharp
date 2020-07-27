@@ -25,6 +25,15 @@ namespace MyFace.Controllers
             return View(viewModel);
         }
 
+        // [HttpGet("next-page")]
+        // public IActionResult NextPage(int pageNumber, int pageSize = 10)
+        // {
+        //     pageNumber += 1;
+        //     var posts = _posts.GetAll(pageNumber, pageSize);
+        //     var viewModel = new PostsViewModel(posts);
+        //     return View(viewModel);
+        // }
+
         [HttpGet("create")]
         public IActionResult CreatePostPage()
         {
