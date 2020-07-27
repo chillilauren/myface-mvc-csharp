@@ -1,0 +1,66 @@
+// Colours
+$background: #252A38;
+$darkerBackground: #151820;
+$defaultForeground: #DCDCDC;
+$primary: #252A38;
+$transparentOverlay: #252A38; // Opacity: 56%
+
+// Fonts
+$font: 'Segoe UI', sans-serif;
+
+// Weight
+$weightRegular: 400;
+$weightBold: 600;
+$weightLight: 300;
+
+// Font size (line height)
+// Desktop
+$dtTitleSize: 32px;
+$dtTitleHeight: 40px;
+
+$dtSubtitleSize: 24px;
+$dtSubtitleHeight: 32px;
+
+$dtBtnSize: 24px;
+$dtBtnHeight: 40px;
+
+$dtBodySize: 16px;
+$dtBodyHeight: 24px;
+
+$dtSecondarySize: 12px;
+$dtSecondaryHeight: 20px;
+
+// Tablet/Mobile
+$mbTitleSize: 24px;
+$mbTitleHeight: 32px;
+
+$mbSubtitleSize: 20px;
+$mbSubtitleHeight: 24px;
+
+$mbBtnSize: 20px;
+$mbBtnHeight: 32px;
+
+$mbBodySize: 14px;
+$mbBodyHeight: 24px;
+
+$mbSecondarySize: 10px;
+$mbSecondaryHeight: 16px;
+
+// Spacing
+// Desktop
+$dtGutter: 48px;
+$dtCardSep: 48px;
+$dtSectionSpacing: 80px;
+$dtCardPadding: 24px;
+
+// Tablet
+$tabGutter: 32px;
+$tabCardSep: 32px;
+$tabSectionSpacing: 48px;
+$tabCardPadding: 16px;
+
+// Mobile
+$mbGutter: 24px;
+$mbCardSep: 24px;
+$mbSectionSpacing: 40px;
+$mbCardPadding: 16px;

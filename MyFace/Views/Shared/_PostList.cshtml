@@ -5,9 +5,9 @@
     {
         <li>
             <img src="@post.ImageUrl"  alt="">
-            <a href="/users/@post.PostedBy.Id">@post.PostedBy.Username</a>
-            <div>@post.FormattedTimeSincePost</div>
-            <div>@post.Message</div>
+            <a class="user" href="/users/@post.PostedBy.Id">@post.PostedBy.Username</a>
+            <div class="post-time" >@post.FormattedTimeSincePost</div>
+            <div class="message" >@post.Message</div>
         </li>
     }
 </ol>

@@ -5,11 +5,15 @@
 }
 
 <section id="hero-section">
-    <img src="@Model.CoverImageUrl" alt="Cover Image"/>
-    <img src="@Model.ProfileImageUrl" alt="Profile Image"/>
-    <h1>@Model.DisplayName</h1>
-    <div>@Model.Username</div>
-    <div>@Model.Email</div>
+    <img class="cover-image" src="@Model.CoverImageUrl" alt="Cover Image"/>
+    <div class="info-container">
+        <img  class="profile-image" src="@Model.ProfileImageUrl" alt="Profile Image"/>
+        <div class="details-container">
+            <h1 class="display-name">@Model.DisplayName</h1>
+            <div class="username">@Model.Username</div>
+            <div class="email">@Model.Email</div>
+        </div>
+    </div>
 </section>
 
 <section id="posts-section">
@@ -17,7 +21,7 @@
     <partial name="_PostList" model="@Model.Posts"/>
     @if (Model.HasMorePosts)
     {
-        <a href="@Model.ShowMorePostsUrl">Show More</a>
+        <a class="show-more" href="@Model.ShowMorePostsUrl">Show More</a>
     }
 </section>
 

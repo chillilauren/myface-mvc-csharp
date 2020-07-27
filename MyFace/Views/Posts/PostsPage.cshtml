@@ -21,10 +21,10 @@
     </ol>
 </section>
 
-<section>
+<section class="pg-btns">
     @if (Model.CurrentPageNumber > 1)
     {
-        <a href="@Model.PreviousPage">Previous Page</a>   
+        <a class="btn prev-btn" href="@Model.PreviousPage">Previous Page</a>   
     }
-    <a href="@Model.NextPage">Next Page</a>
+    <a class="btn nxt-btn" href="@Model.NextPage">Next Page</a>
 </section>

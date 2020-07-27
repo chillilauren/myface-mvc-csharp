@@ -1,0 +1,206 @@
+@import "_variables";
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: $font;
+    color: #fff;
+    background-color: $background;
+}
+
+// All links
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+// All images
+img {
+    height: auto;
+}
+
+// All sections
+section {
+    display: flex;
+    flex-direction: column;
+    margin: $mbCardPadding;
+    h2 {
+        font-size: $mbSubtitleSize;
+        line-height: $mbSubtitleHeight;
+        font-weight: $weightLight;
+    }
+}
+
+header {
+    // display: none;
+    position: fixed;
+    background: $background;
+    width: 100%;
+    // display: none;
+    nav {
+        padding: $mbCardPadding;
+        display: flex;
+        justify-content: space-between;
+        // background: lightpink;
+        a {
+            font-size: $mbTitleSize;
+            line-height: $mbTitleHeight;
+        }
+        ul {
+            display: flex;
+            // background: lightgreen;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li a {
+                font-size: 16px;
+                margin: 0 $mbCardPadding;
+                // hover only works on desktop can put 
+                // this in media query later
+                &:hover {
+                    border-bottom: #fff solid 1.5px;
+                    transition: border-bottom 1s;
+                }
+            }
+        }
+    }
+}
+
+#hero-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    .cover-image {
+        max-width: 100%;
+    }
+    .info-container {
+        display: flex;
+        .profile-image {
+            max-width: 25%;
+            border-radius: 50%;
+            border: solid 3px #fff;
+            margin: $mbCardPadding;
+        }
+        .details-container {
+            .display-name {
+                font-size: $mbTitleSize;
+                line-height: $mbTitleHeight;
+                font-weight: $weightRegular;
+                letter-spacing: 0.5px;
+                margin: 15px 0;
+            }
+            .username {
+                font-size: $mbBodySize;
+                line-height: $mbBodyHeight;
+                font-weight: $weightBold;
+                letter-spacing: 0.5px;
+                margin: 0;
+            }
+            .email {
+                font-size: $mbSecondarySize;
+                line-height: $mbSecondaryHeight;
+                font-weight: $weightLight;
+                letter-spacing: 0.5px;
+                color: $defaultForeground;
+            }
+        }
+    }
+}
+
+#posts-section {
+    position: relative;
+    ol {
+        display: flex;
+        background: lightcoral;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        li {
+            // background-color: $darkerBackground;
+            background: steelblue;
+            margin: $mbCardPadding;
+            // width: 400px;
+            img {
+                max-width: 100%;
+            }
+            .user {
+                font-size: $mbBodySize;
+                line-height: $mbBodyHeight;
+            }
+            .post-time {
+                font-size: $mbSecondarySize;
+                line-height: $mbSecondaryHeight;
+                font-weight: $weightLight;
+                color: $defaultForeground;
+            }
+            .message {
+                padding: $mbCardPadding;
+                font-size: $mbBodySize;
+                line-height: $mbBodyHeight;
+            }
+        }
+    }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $darkerBackground;
+    border-top: 1px #fff solid;
+    img {
+        width: 30%;
+        max-width: 100%;
+        height: auto;
+        margin: $mbCardPadding;
+    }
+}
+
+// Posts page
+.posts-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    .post {
+        background: $darkerBackground;
+        margin: $mbCardSep;
+        img {
+            max-width: 100%;
+        }
+        .post-content {
+            padding: 10px;
+            .post-user {
+                font-size: $mbSubtitleSize - 2px;
+                font-weight: $weightRegular;
+            }
+            .post-message {
+                font-size: $mbBodySize;
+                font-weight: $weightLight;
+            }
+        }
+    }
+}
+
+.pg-btns {
+    background: lightcoral;
+    display: flex;
+    line-height: $mbBtnHeight;
+    font-size: $mbBtnSize;
+    position: relative;
+        .btn {
+            &:hover {
+                border-bottom: #fff solid 1.5px;
+                transition: border-bottom 1s;
+            }
+            .prev-btn {
+                position: absolute;
+                left: 0;
+            }
+            .nxt-btn {
+                position: relative;
+                right: 0;
+            }
+    } 
+}
+
