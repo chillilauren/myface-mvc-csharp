@@ -12,6 +12,7 @@ a {
 }
 
 img {
+  max-width: 100%;
   height: auto;
 }
 
@@ -23,16 +24,18 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 16px;
+  margin: 40px 0;
 }
 
 section h2 {
   font-size: 20px;
   line-height: 24px;
   font-weight: 300;
+  margin: 24px;
 }
 
 header {
+  display: none;
   position: fixed;
   background: #252A38;
   width: 100%;
@@ -74,14 +77,10 @@ header nav ul li a:hover {
 }
 
 #hero-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: 0;
+  position: relative;
+  margin: 0 0 60px 0;
+  padding: 0;
+  background: lightcoral;
 }
 
 #hero-section .cover-image {
@@ -92,13 +91,21 @@ header nav ul li a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  background: rgba(37, 42, 56, 0.56);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+  left: 40px;
+  bottom: -45px;
 }
 
 #hero-section .info-container .profile-image {
-  max-width: 25%;
+  width: 90px;
   border-radius: 50%;
   border: solid 3px #fff;
-  margin: 16px;
+  margin-right: 16px;
 }
 
 #hero-section .info-container .details-container .display-name {
@@ -106,15 +113,17 @@ header nav ul li a:hover {
   line-height: 32px;
   font-weight: 400;
   letter-spacing: 0.5px;
-  margin: 15px 0;
+  margin: 10px 0 0 0;
+  position: relative;
+  text-align: center;
 }
 
 #hero-section .info-container .details-container .username {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
   font-weight: 600;
   letter-spacing: 0.5px;
-  margin: 0;
+  margin: 5px 0 0 0;
 }
 
 #hero-section .info-container .details-container .email {
@@ -125,45 +134,51 @@ header nav ul li a:hover {
   color: #DCDCDC;
 }
 
-#posts-section {
-  position: relative;
-}
-
-#posts-section ol {
+.post-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: lightcoral;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow-x: scroll;
   margin: 0;
+  width: 100%;
   padding: 0;
+  letter-spacing: 0.5px;
   list-style: none;
 }
 
-#posts-section ol li {
-  background: steelblue;
-  margin: 16px;
+.post-list::-webkit-scrollbar {
+  display: none;
 }
 
-#posts-section ol li img {
-  max-width: 100%;
+.post-list .post-item {
+  background-color: #151820;
+  margin: 0 0 0 24px;
+  min-width: calc(100% - 96px);
 }
 
-#posts-section ol li .user {
+.post-list .post-user {
   font-size: 14px;
-  line-height: 24px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 0 16px;
 }
 
-#posts-section ol li .post-time {
+.post-list .post-time {
   font-size: 10px;
   line-height: 16px;
   font-weight: 300;
   color: #DCDCDC;
+  padding: 0 16px;
 }
 
-#posts-section ol li .message {
-  padding: 16px;
+.post-list .post-message {
   font-size: 14px;
-  line-height: 24px;
+  line-height: 20px;
+  padding: 13px 16px;
 }
 
 footer {
@@ -183,44 +198,7 @@ footer {
 
 footer img {
   width: 30%;
-  max-width: 100%;
-  height: auto;
   margin: 16px;
-}
-
-.posts-list {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 0;
-}
-
-.posts-list .post {
-  background: #151820;
-  margin: 24px;
-}
-
-.posts-list .post img {
-  max-width: 100%;
-}
-
-.posts-list .post .post-content {
-  padding: 10px;
-}
-
-.posts-list .post .post-content .post-user {
-  font-size: 18px;
-  font-weight: 400;
-}
-
-.posts-list .post .post-content .post-message {
-  font-size: 14px;
-  font-weight: 300;
 }
 
 .pg-btns {

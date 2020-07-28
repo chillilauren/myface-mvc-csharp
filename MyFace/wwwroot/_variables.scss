@@ -3,7 +3,7 @@ $background: #252A38;
 $darkerBackground: #151820;
 $defaultForeground: #DCDCDC;
 $primary: #252A38;
-$transparentOverlay: #252A38; // Opacity: 56%
+$transparentOverlay: transparentize($background, 0.44); // Opacity: 56%
 
 // Fonts
 $font: 'Segoe UI', sans-serif;
@@ -41,7 +41,7 @@ $mbBtnSize: 20px;
 $mbBtnHeight: 32px;
 
 $mbBodySize: 14px;
-$mbBodyHeight: 24px;
+$mbBodyHeight: 20px;
 
 $mbSecondarySize: 10px;
 $mbSecondaryHeight: 16px;

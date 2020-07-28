@@ -7,11 +7,11 @@
 <h1>Posts</h1>
 
 <section>
-    <ol class="posts-list">
+    <ol class="post-list">
         @foreach (var post in Model.Posts)
         {
-            <li class="post">
-                <img src="@post.ImageUrl" alt="post image" class="post-image"/>
+            <li class="post-item">
+                <img class="post-image" src="@post.ImageUrl" alt="post image" class="post-image"/>
                 <div class="post-content">
                     <div class="post-user">@post.PostedBy.DisplayName</div>
                     <p class="post-message">@post.Message</p>

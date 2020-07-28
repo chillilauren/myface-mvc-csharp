@@ -16,6 +16,7 @@ a {
 
 // All images
 img {
+    max-width: 100%;
     height: auto;
 }
 
@@ -23,16 +24,17 @@ img {
 section {
     display: flex;
     flex-direction: column;
-    margin: $mbCardPadding;
+    margin: $mbSectionSpacing 0;
     h2 {
         font-size: $mbSubtitleSize;
         line-height: $mbSubtitleHeight;
         font-weight: $weightLight;
+        margin: $mbGutter;
     }
 }
 
 header {
-    // display: none;
+    display: none;
     position: fixed;
     background: $background;
     width: 100%;
@@ -66,20 +68,31 @@ header {
     }
 }
 
+
+// User page - top section
+$profileImageWidth: 90px;
+
 #hero-section {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    position: relative;
+    margin: 0 0 $profileImageWidth/1.5 0;
+    padding: 0;
+    background: lightcoral;
     .cover-image {
         max-width: 100%;
     }
     .info-container {
         display: flex;
+        background: $transparentOverlay;
+        align-items: center;
+        position: absolute;
+        right: 0;
+        left: 40px;
+        bottom: -$profileImageWidth/2;
         .profile-image {
-            max-width: 25%;
+            width: $profileImageWidth;
             border-radius: 50%;
             border: solid 3px #fff;
-            margin: $mbCardPadding;
+            margin-right: $mbCardPadding;
         }
         .details-container {
             .display-name {
@@ -87,14 +100,17 @@ header {
                 line-height: $mbTitleHeight;
                 font-weight: $weightRegular;
                 letter-spacing: 0.5px;
-                margin: 15px 0;
+                margin: 10px 0 0 0;
+                // background: lightgreen;
+                position: relative;
+                text-align: center;
             }
             .username {
                 font-size: $mbBodySize;
                 line-height: $mbBodyHeight;
                 font-weight: $weightBold;
                 letter-spacing: 0.5px;
-                margin: 0;
+                margin: 5px 0 0 0;
             }
             .email {
                 font-size: $mbSecondarySize;
@@ -107,40 +123,48 @@ header {
     }
 }
 
-#posts-section {
-    position: relative;
-    ol {
-        display: flex;
-        background: lightcoral;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        li {
-            // background-color: $darkerBackground;
-            background: steelblue;
-            margin: $mbCardPadding;
-            // width: 400px;
-            img {
-                max-width: 100%;
-            }
-            .user {
-                font-size: $mbBodySize;
-                line-height: $mbBodyHeight;
-            }
-            .post-time {
-                font-size: $mbSecondarySize;
-                line-height: $mbSecondaryHeight;
-                font-weight: $weightLight;
-                color: $defaultForeground;
-            }
-            .message {
-                padding: $mbCardPadding;
-                font-size: $mbBodySize;
-                line-height: $mbBodyHeight;
-            }
+// User page - Posts/likes/dislikes section
+.post-list {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    // background: lightcoral;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+    letter-spacing: 0.5px;
+    list-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    .post-item {
+        background-color: $darkerBackground;
+        // background: steelblue;
+        margin: 0 0 0 $mbGutter;
+        min-width: calc(100% - #{$mbGutter*4});
         }
+    .post-user {
+        font-size: $mbBodySize;
+        font-weight: $weightBold;
+        line-height: $mbBodyHeight;
+        padding: 0 $mbCardPadding;
+    }
+    .post-time {
+        font-size: $mbSecondarySize;
+        line-height: $mbSecondaryHeight;
+        font-weight: $weightLight;
+        color: $defaultForeground;
+        padding: 0 $mbCardPadding;
+    }
+    .post-message {
+        font-size: $mbBodySize;
+        line-height: $mbBodyHeight;
+        padding: 13px $mbCardPadding;
     }
 }
+
+
+// All pages
 
 footer {
     display: flex;
@@ -150,37 +174,12 @@ footer {
     border-top: 1px #fff solid;
     img {
         width: 30%;
-        max-width: 100%;
-        height: auto;
         margin: $mbCardPadding;
     }
 }
 
+
 // Posts page
-.posts-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    .post {
-        background: $darkerBackground;
-        margin: $mbCardSep;
-        img {
-            max-width: 100%;
-        }
-        .post-content {
-            padding: 10px;
-            .post-user {
-                font-size: $mbSubtitleSize - 2px;
-                font-weight: $weightRegular;
-            }
-            .post-message {
-                font-size: $mbBodySize;
-                font-weight: $weightLight;
-            }
-        }
-    }
-}
 
 .pg-btns {
     background: lightcoral;
