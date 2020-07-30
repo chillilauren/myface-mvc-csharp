@@ -7,15 +7,34 @@
     <link rel="stylesheet" href="/myStyles.css" />
 </head>
 <body>
+
+    @* Desktop nav menu *@
     <header>
         <partial name="_Nav"/>
     </header>
+
+    @* Mobile nav menu *@
+    <div id="mbNav">
+        <button id="mbNavBtn" class="mb-nav-btn"><span class="burger-menu"></span></button>
+        <div class="mb-nav-overlay">
+            <div class="menu-container">
+                <partial name="_Nav"/>
+                <div class="menu-logos">
+                    <img class="logo-img" src="/images/corndel-logo.png" alt="Corndel logo">
+                    <img class="logo-img" src="/images/softwire-logo.png" alt="Softwire logo">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* Main content *@
     <div>
         <main role="main">
             @RenderBody()
         </main>
     </div>
 
+    @* Footer *@
     <footer>
         <img src="/images/corndel-logo.png" alt="Corndel logo">
         <img src="/images/softwire-logo.png" alt="Softwire logo">
