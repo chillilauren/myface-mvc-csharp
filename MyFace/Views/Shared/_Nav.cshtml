@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <a class="nav-logo" asp-controller="Home" asp-action="Index">MyFace</a>
+    <ul>
+        <li class="nav-item">
+            <a asp-controller="Posts" asp-action="PostsPage">Posts</a>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="Users" asp-action="UsersPage">Users</a>
+        </li>
+        <li class="nav-item">
+            <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </li>
+    </ul>
+    <a asp-controller="Posts" asp-action="CreatePostPage">+ Create Post</a>
+</nav>

@@ -34,46 +34,8 @@ section h2 {
   margin: 24px;
 }
 
-header {
+.navbar {
   display: none;
-  position: fixed;
-  background: #252A38;
-  width: 100%;
-}
-
-header nav {
-  padding: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-header nav a {
-  font-size: 24px;
-  line-height: 32px;
-}
-
-header nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-header nav ul li a {
-  font-size: 16px;
-  margin: 0 16px;
-}
-
-header nav ul li a:hover {
-  border-bottom: #fff solid 1.5px;
-  -webkit-transition: border-bottom 1s;
-  transition: border-bottom 1s;
 }
 
 #hero-section {
@@ -81,10 +43,6 @@ header nav ul li a:hover {
   margin: 0 0 60px 0;
   padding: 0;
   background: lightcoral;
-}
-
-#hero-section .cover-image {
-  max-width: 100%;
 }
 
 #hero-section .info-container {
@@ -157,7 +115,7 @@ header nav ul li a:hover {
 .post-list .post-item {
   background-color: #151820;
   margin: 0 0 0 24px;
-  min-width: calc(100% - 96px);
+  min-width: calc(100% - 120px);
 }
 
 .post-list .post-user {
@@ -197,7 +155,7 @@ footer {
 }
 
 footer img {
-  width: 30%;
+  width: 120px;
   margin: 16px;
 }
 
@@ -225,5 +183,113 @@ footer img {
 .pg-btns .btn .nxt-btn {
   position: relative;
   right: 0;
+}
+
+@media only screen and (min-width: 767px) and (orientation: portrait) {
+  section {
+    margin: 48px 0;
+  }
+  section h2 {
+    font-size: 20px;
+    font-weight: 300;
+    margin: 16px;
+  }
+  .post-list .post-item {
+    margin: 0 0 0 32px;
+    min-width: 250px;
+    max-width: 250px;
+  }
+}
+
+@media only screen and (min-width: 1023px) {
+  .navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: #151820;
+    padding: 24px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    height: 30px;
+  }
+  .navbar .nav-logo {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .navbar a {
+    font-weight: 300;
+  }
+  .navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar ul .nav-item {
+    font-size: 20px;
+    margin: 0 48px;
+    font-weight: 300;
+  }
+  .navbar ul .nav-item:hover {
+    border-bottom: #fff solid 1.5px;
+    -webkit-transition: border-bottom 1s;
+    transition: border-bottom 1s;
+  }
+  section h2 {
+    font-size: 24px;
+    font-weight: 300;
+  }
+  #hero-section, #posts-section, #likes-section, #dislikes-section {
+    margin: 0 96px 80px 96px;
+  }
+  .post-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .post-list .post-item {
+    margin: 24px;
+    min-width: 300px;
+    max-width: 300px;
+  }
+  .post-list .post-user {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    padding: 0 16px;
+  }
+  .post-list .post-time {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 300;
+    padding: 0 16px;
+  }
+  .post-list .post-message {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px 16px;
+  }
+}
+
+@media only screen and (min-width: 1439px) {
+  #hero-section, #posts-section, #likes-section, #dislikes-section {
+    margin: 0 160px 80px 160px;
+  }
+}
+
+@media only screen and (min-width: 2559px) {
+  #hero-section, #posts-section, #likes-section, #dislikes-section {
+    margin: 0 240px 80px 240px;
+  }
+  .post-list .post-item {
+    margin: 24px;
+    min-width: 400px;
+    max-width: 400px;
+  }
 }
 /*# sourceMappingURL=myStyles.css.map */

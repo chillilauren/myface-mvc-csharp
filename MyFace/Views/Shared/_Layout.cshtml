@@ -8,20 +8,7 @@
 </head>
 <body>
     <header>
-        <nav>
-            <a asp-controller="Home" asp-action="Index">MyFace</a>
-            <ul>
-                <li>
-                    <a asp-controller="Posts" asp-action="PostsPage">Posts</a>
-                </li>
-                <li>
-                    <a asp-controller="Users" asp-action="UsersPage">Users</a>
-                </li>
-                <li>
-                    <a asp-controller="Home" asp-action="Privacy">Privacy</a>
-                </li>
-            </ul>
-        </nav>
+        <partial name="_Nav"/>
     </header>
     <div>
         <main role="main">

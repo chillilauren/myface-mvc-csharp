@@ -33,39 +33,37 @@ section {
     }
 }
 
-header {
+.navbar {
     display: none;
-    position: fixed;
-    background: $background;
-    width: 100%;
-    // display: none;
-    nav {
-        padding: $mbCardPadding;
-        display: flex;
-        justify-content: space-between;
-        // background: lightpink;
-        a {
-            font-size: $mbTitleSize;
-            line-height: $mbTitleHeight;
-        }
-        ul {
-            display: flex;
-            // background: lightgreen;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            li a {
-                font-size: 16px;
-                margin: 0 $mbCardPadding;
-                // hover only works on desktop can put 
-                // this in media query later
-                &:hover {
-                    border-bottom: #fff solid 1.5px;
-                    transition: border-bottom 1s;
-                }
-            }
-        }
-    }
+    // position: fixed;
+    // background: $darkerBackground;
+    // width: 100%;
+    // z-index: 1;
+    // padding: $mbCardPadding;
+    // justify-content: space-between;
+    // // background: lightpink;
+    // .logo {
+    //     font-size: $mbTitleSize;
+    //     line-height: $mbTitleHeight;
+    //     background-color: steelblue;;
+    // }
+    // ul {
+    //     display: flex;
+    //     // background: lightgreen;
+    //     list-style: none;
+    //     margin: 0;
+    //     padding: 0;
+    //     .nav-item {
+    //         font-size: 16px;
+    //         margin: 0 $mbCardPadding;
+    //         // hover only works on desktop can put 
+    //         // this in media query later
+    //         &:hover {
+    //             border-bottom: #fff solid 1.5px;
+    //             transition: border-bottom 1s;
+    //         }
+    //     }
+    // }
 }
 
 
@@ -77,9 +75,6 @@ $profileImageWidth: 90px;
     margin: 0 0 $profileImageWidth/1.5 0;
     padding: 0;
     background: lightcoral;
-    .cover-image {
-        max-width: 100%;
-    }
     .info-container {
         display: flex;
         background: $transparentOverlay;
@@ -141,7 +136,7 @@ $profileImageWidth: 90px;
         background-color: $darkerBackground;
         // background: steelblue;
         margin: 0 0 0 $mbGutter;
-        min-width: calc(100% - #{$mbGutter*4});
+        min-width: calc(100% - #{$mbGutter*5});
         }
     .post-user {
         font-size: $mbBodySize;
@@ -173,7 +168,7 @@ footer {
     background-color: $darkerBackground;
     border-top: 1px #fff solid;
     img {
-        width: 30%;
+        width: 120px;
         margin: $mbCardPadding;
     }
 }
@@ -203,3 +198,128 @@ footer {
     } 
 }
 
+// Tablet
+@media only screen and (min-width: 767px) and (orientation: portrait) {
+    section {
+        margin: $tabSectionSpacing 0;
+        h2 {
+            font-size: $mbSubtitleSize;
+            font-weight: $weightLight;
+            margin: $tabCardPadding;
+        }
+    }
+
+    $profileImageWidth: 110px;
+
+    .post-list {
+        .post-item {
+            margin: 0 0 0 $tabGutter;
+            // min-width: calc(100% - #{$tabGutter*20});
+            min-width: 250px;
+            max-width: 250px;
+        }
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 1023px) {
+    $navbarHeight: 30px;
+
+    .navbar {
+        display: flex;
+        background-color: $darkerBackground;
+        padding: $dtCardPadding;
+        align-items: center;
+        justify-content: space-around;
+        height: $navbarHeight;
+        .nav-logo {
+            font-size: $dtTitleSize;
+            line-height: $dtTitleHeight;
+        }
+        a {
+            font-weight: $weightLight;
+        }
+        ul {
+            display: flex;
+            // background: lightgreen;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            .nav-item {
+                font-size: 20px;
+                margin: 0 $dtGutter;
+                font-weight: $weightLight;
+                // hover only works on desktop can put 
+                // this in media query later
+                &:hover {
+                    border-bottom: #fff solid 1.5px;
+                    transition: border-bottom 1s;
+                }
+            }
+        }
+    }
+
+    section {
+        h2 {
+            font-size: $dtSubtitleSize;
+            font-weight: $weightLight;
+        }
+    }
+
+    #hero-section, #posts-section, #likes-section, #dislikes-section {
+        margin: 0 $dtGutter*2 $dtSectionSpacing $dtGutter*2;
+    }
+
+    $profileImageWidth: 140px;
+
+    .post-list {
+        flex-wrap: wrap;
+        margin: 0 auto;
+        // background: steelblue;
+        .post-item {
+            margin: $dtCardPadding;
+            min-width: 300px;
+            max-width: 300px;
+        }
+        .post-user {
+            font-size: $dtBodySize;
+            font-weight: $weightBold;
+            line-height: $dtBodyHeight;
+            padding: 0 $mbCardPadding;
+        }
+        .post-time {
+            font-size: $dtSecondarySize;
+            line-height: $dtSecondaryHeight;
+            font-weight: $weightLight;
+            padding: 0 $mbCardPadding;
+        }
+        .post-message {
+            font-size: $dtBodySize;
+            line-height: $dtBodyHeight;
+            padding: 13px $mbCardPadding;
+        }
+    }
+}
+
+
+// Larger desktop
+@media only screen and (min-width: 1439px ) {
+    #hero-section, #posts-section, #likes-section, #dislikes-section {
+        margin: 0 $dtSectionSpacing*2 $dtSectionSpacing $dtSectionSpacing*2;
+    }
+}
+
+
+// 4k desktop
+@media only screen and (min-width: 2559px) {
+    #hero-section, #posts-section, #likes-section, #dislikes-section {
+        margin: 0 $dtSectionSpacing*3 $dtSectionSpacing $dtSectionSpacing*3;
+    }
+    .post-list {
+        .post-item {
+        margin: $dtCardPadding;
+        min-width: 400px;
+        max-width: 400px;
+        }
+    }
+}
